@@ -1,4 +1,5 @@
 streamlit
 opendatasets
-mixtend
+mlxtend
 h2o
+
