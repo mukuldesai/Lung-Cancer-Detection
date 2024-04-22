@@ -3,6 +3,10 @@
 
 # In[2]:
 
+import subprocess
+
+# Execute pip install command using subprocess
+subprocess.run(['pip', 'install', 'opendatasets'])
 
 get_ipython().system('pip install opendatasets')
 
