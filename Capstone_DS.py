@@ -2,7 +2,6 @@
 # coding: utf-8
 
 # Import libraries
-import opendatasets as od
 import subprocess
 import pandas as pd
 import os
@@ -10,8 +9,17 @@ import os
 # Dataset URL
 data = "https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link"
 
+# Execute pip install command using subprocess
+subprocess.run(['pip', 'install', 'opendatasets'])
+
+# Import opendatasets after installation
+import opendatasets as od
+
 # Download dataset using opendatasets
 od.download(data)
+
+# Continue with the rest of your script...
+
 
 # Continue with the rest of your script...
 
