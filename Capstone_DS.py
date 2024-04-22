@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+pip install opendatasets
+
 # In[2]:
 import subprocess
 import pandas as pd
 import os
 import opendatasets as od
+
 
 # Execute pip install command using subprocess
 subprocess.run(['pip', 'install', 'opendatasets'])
