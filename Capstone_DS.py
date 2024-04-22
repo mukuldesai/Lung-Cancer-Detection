@@ -4,13 +4,12 @@
 # In[2]:
 
 
-get_ipython().system('pip install opendatasets')
+
 
 
 # In[3]:
 
 
-pip install mlxtend
 
 
 # In[4]:
@@ -28,8 +27,6 @@ od.download(data)
 
 # In[6]:
 
-
-pip install streamlit
 
 
 # In[7]:
@@ -411,7 +408,6 @@ print(f'Ridge Regression MSE: {ridge_mse}')
 # In[36]:
 
 
-pip install h2o
 
 
 # In[37]:
@@ -437,7 +433,7 @@ data = h2o.H2OFrame(data)
 # In[40]:
 
 
-get_ipython().system('pip install xgboost')
+
 
 
 # In[41]:
@@ -593,9 +589,6 @@ from statsmodels.stats.outliers_influence import variance_inflation_factor
 import xgboost as xgb
 from xgboost import plot_importance
 
-get_ipython().system('pip install pydotplus')
-get_ipython().system('pip install psutil')
-get_ipython().system('pip install graphviz')
 
 
 # In[54]:
@@ -733,7 +726,7 @@ best_model.algo
 # In[68]:
 
 
-pip install streamlit
+
 
 
 # In[ ]:
