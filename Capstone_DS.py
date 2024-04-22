@@ -29,13 +29,12 @@ od.download(data)
 # In[6]:
 
 
-pip install streamlit
+
 
 
 # In[7]:
 
 
-import streamlit as st
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -733,7 +732,7 @@ best_model.algo
 # In[68]:
 
 
-pip install streamlit
+
 
 
 # In[ ]:
