@@ -28,8 +28,6 @@ od.download(data)
 # In[6]:
 
 
-pip install streamlit
-
 
 # In[7]:
 
