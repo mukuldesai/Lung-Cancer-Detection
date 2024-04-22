@@ -1,16 +1,26 @@
-import opendatasets as od
+#!/usr/bin/env python
+# coding: utf-8
+
+import subprocess
 import os
+import shutil
+import opendatasets as od
+
+# Execute pip install command using subprocess
+subprocess.run(['pip', 'install', 'opendatasets'])
 
 # Set the directory containing kaggle.json
-kaggle_credentials_dir = '/kaggle/working/'
+repo_path = '/mount/src/demods/'  # Update this with your actual path
+kaggle_credentials_dir = os.path.join(repo_path, 'kaggle.json')
 
-# Set Kaggle API credentials
-os.environ['KAGGLE_CONFIG_DIR'] = kaggle_credentials_dir
+# Move kaggle.json to the appropriate directory
+shutil.move(kaggle_credentials_dir, os.path.expanduser('~/.kaggle/kaggle.json'))
+
+# Dataset URL
+data = "https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link"
 
 # Download dataset using opendatasets
-data = "https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link"
 od.download(data)
-
 
 
 # In[6]:
@@ -29,10 +39,7 @@ from sklearn.ensemble import RandomForestClassifier
 # In[8]:
 
 
-import os
 
-
-# In[9]:
 
 
 data_dir = '.\cancer-patients-and-air-pollution-a-new-link'
