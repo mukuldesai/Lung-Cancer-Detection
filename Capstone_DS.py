@@ -1,32 +1,41 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import subprocess
+# In[2]:
 
-# Execute pip install command using subprocess
-subprocess.run(['pip', 'install', 'opendatasets'])
 
-import pandas as pd
-import os
+get_ipython().system('pip install opendatasets')
+
+
+# In[3]:
+
+
+pip install mlxtend
+
+
+# In[4]:
+
+
 import opendatasets as od
-
-# Dataset URL
 data = "https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link"
 
-# Download dataset using opendatasets
-od.download(data)
 
+# In[5]:
+
+
+od.download(data)
 
 
 # In[6]:
 
 
-
+pip install streamlit
 
 
 # In[7]:
 
 
+import streamlit as st
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -402,12 +411,13 @@ print(f'Ridge Regression MSE: {ridge_mse}')
 # In[36]:
 
 
-
+pip install h2o
 
 
 # In[37]:
 
 
+import h2o
 h2o.init()  # This will start an H2O cluster
 
 
@@ -723,7 +733,7 @@ best_model.algo
 # In[68]:
 
 
-
+pip install streamlit
 
 
 # In[ ]:
