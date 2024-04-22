@@ -408,7 +408,6 @@ print(f'Ridge Regression MSE: {ridge_mse}')
 # In[36]:
 
 
-pip install h2o
 
 
 # In[37]:
