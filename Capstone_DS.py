@@ -1,29 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+import subprocess
 
+# Execute pip install command using subprocess
+subprocess.run(['pip', 'install', 'opendatasets'])
 
-get_ipython().system('pip install opendatasets')
-
-
-# In[3]:
-
-
-
-
-
-# In[4]:
-
-
+import pandas as pd
+import os
 import opendatasets as od
+
+# Dataset URL
 data = "https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link"
 
-
-# In[5]:
-
-
+# Download dataset using opendatasets
 od.download(data)
+
 
 
 # In[6]:
