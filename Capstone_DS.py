@@ -729,7 +729,6 @@ best_model.algo
 # In[68]:
 
 
-pip install streamlit
 
 
 # In[ ]:
