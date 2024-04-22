@@ -1,28 +1,16 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
-
-
-
-# In[3]:
-
-
-
-
-# In[4]:
-
-
 import opendatasets as od
+import os
+
+# Set the directory containing kaggle.json
+kaggle_credentials_dir = '/kaggle/working/'
+
+# Set Kaggle API credentials
+os.environ['KAGGLE_CONFIG_DIR'] = kaggle_credentials_dir
+
+# Download dataset using opendatasets
 data = "https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link"
-
-
-# In[5]:
-
-
 od.download(data)
+
 
 
 # In[6]:
