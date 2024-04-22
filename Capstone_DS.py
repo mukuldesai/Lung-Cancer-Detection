@@ -10,7 +10,6 @@ get_ipython().system('pip install opendatasets')
 # In[3]:
 
 
-pip install mlxtend
 
 
 # In[4]:
