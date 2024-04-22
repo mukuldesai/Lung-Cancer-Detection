@@ -2,24 +2,17 @@
 # coding: utf-8
 
 # In[2]:
-
 import subprocess
+import pandas as pd
+import os
+import opendatasets as od
 
 # Execute pip install command using subprocess
 subprocess.run(['pip', 'install', 'opendatasets'])
 
-get_ipython().system('pip install opendatasets')
-
-
-# In[3]:
 
 
 
-
-# In[4]:
-
-
-import opendatasets as od
 data = "https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link"
 
 
@@ -37,18 +30,10 @@ od.download(data)
 
 
 
-import pandas as pd
+
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
-
-# In[8]:
-
-
-import os
-
-
-# In[9]:
 
 
 data_dir = '.\cancer-patients-and-air-pollution-a-new-link'
