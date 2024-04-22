@@ -1,10 +1,4 @@
 # Install opendatasets if not already installed
-try:
-    import opendatasets as od
-except ImportError:
-    print("opendatasets not found. Installing...")
-    !pip install opendatasets
-    import opendatasets as od
 
 # Download dataset using opendatasets
 
