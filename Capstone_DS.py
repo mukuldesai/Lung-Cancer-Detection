@@ -19,28 +19,24 @@ od.download(data)
 
 
 
-# In[6]:
+# Install opendatasets if not already installed
+try:
+    import opendatasets as od
+except ImportError:
+    print("opendatasets not found. Installing...")
+    subprocess.run(["pip", "install", "opendatasets"], check=True)
+    import opendatasets as od
 
+# Download dataset using opendatasets
+od.download(data)
 
+# Continue with the rest of your script...
 
-# In[7]:
+# Set data directory
+data_dir = 'cancer-patients-and-air-pollution-a-new-link'
 
-
-
-
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-
-
-
-data_dir = '.\cancer-patients-and-air-pollution-a-new-link'
-
-
-# In[10]:
-
-
-os.listdir(data_dir)
-
+# List files in data directory
+print(os.listdir(data_dir))
 
 # In[11]:
 
