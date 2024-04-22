@@ -2,4 +2,8 @@ streamlit
 opendatasets
 mlxtend
 h2o
+graphviz
+psutil
+pydotplus
+xgboost
 
