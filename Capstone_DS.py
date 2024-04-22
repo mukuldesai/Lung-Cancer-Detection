@@ -1,30 +1,5 @@
-# Install opendatasets if not already installed
-
-# Download dataset using opendatasets
-
-od.download(data)
 
 
-
-# Continue with the rest of your script...
-
-
-# Continue with the rest of your script...
-
-
-
-# Install opendatasets if not already installed
-try:
-    import opendatasets as od
-except ImportError:
-    print("opendatasets not found. Installing...")
-    subprocess.run(["pip", "install", "opendatasets"], check=True)
-    import opendatasets as od
-
-# Download dataset using opendatasets
-od.download(data)
-
-# Continue with the rest of your script...
 
 # Set data directory
 data_dir = 'cancer-patients-and-air-pollution-a-new-link'
