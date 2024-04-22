@@ -410,13 +410,12 @@ print(f'Ridge Regression MSE: {ridge_mse}')
 # In[36]:
 
 
-pip install h2o
+
 
 
 # In[37]:
 
 
-import h2o
 h2o.init()  # This will start an H2O cluster
 
 
