@@ -2,14 +2,22 @@ import subprocess
 import os
 import pandas as pd
 
+
+import urllib
+
 # Set the GitHub username and repository name
 github_username = 'mukuldesai'
 repo_name = 'demoDS'
 
-# Construct the GitHub repository URL
-repo_path = f'https://github.com/{github_username}/{repo_name}'
+# Construct the raw GitHub file URL
+raw_file_url = f'https://raw.githubusercontent.com/mukuldesai/demoDS/main/cancer%20patient%20data%20sets.csv'
 
-# Define the path to the CSV file in your GitHub repository
+# Read the CSV file from the raw GitHub file URL
+data = pd.read_csv(urllib.request.urlopen(raw_file_url))
+
+# Display the data
+print(data.head())
+
 csv_file_path = os.path.join(repo_path, 'cancer patient data sets.csv')
 
 # Read the CSV file
