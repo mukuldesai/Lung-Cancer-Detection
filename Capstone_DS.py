@@ -7,7 +7,8 @@ import pandas as pd
 subprocess.run(['pip', 'install', 'opendatasets'])
 
 # Set the directory containing kaggle.json
-repo_path = '/mount/src/mukuldesai/demoDS/'  # Update this with your actual path
+repo_path = repo_path = 'https://github.com/mukuldesai/demoDS/'
+  # Update this with your actual path
 kaggle_credentials_dir = os.path.join(repo_path, 'kaggle.json')
 
 # Dataset URL
