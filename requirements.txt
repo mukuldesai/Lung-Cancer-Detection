@@ -6,4 +6,5 @@ graphviz
 psutil
 pydotplus
 xgboost
+seaborn==0.11.2
 
