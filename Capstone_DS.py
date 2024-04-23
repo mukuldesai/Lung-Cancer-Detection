@@ -22,7 +22,9 @@ data = "https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-po
 od.download(data)
 
 # Define the directory containing the downloaded dataset
-data_dir = './cancer-patients-and-air-pollution-a-new-link'
+# Read the CSV file
+data_file_path = os.path.join(data_dir, 'cancer patient data sets.csv')
+data = pd.read_csv(data_file_path)
 
 # Check if the data directory exists
 if os.path.exists(data_dir):
