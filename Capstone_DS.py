@@ -64,7 +64,6 @@ data_dir = '.\cancer-patients-and-air-pollution-a-new-link'
 # In[10]:
 
 
-os.listdir(data_dir)
 
 
 # In[11]:
