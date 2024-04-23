@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 import subprocess
 import os
-
 import opendatasets as od
 import pandas as pd
 
@@ -22,9 +18,7 @@ data = "https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-po
 od.download(data)
 
 # Define the directory containing the downloaded dataset
-# Read the CSV file
-data_file_path = os.path.join(data_dir, 'cancer patient data sets.csv')
-data = pd.read_csv(data_file_path)
+data_dir = './cancer-patients-and-air-pollution-a-new-link'
 
 # Check if the data directory exists
 if os.path.exists(data_dir):
@@ -38,6 +32,7 @@ if os.path.exists(data_dir):
     print("Loaded dataset successfully!")
 else:
     print("The data directory does not exist or is not accessible.")
+
 
 
 
