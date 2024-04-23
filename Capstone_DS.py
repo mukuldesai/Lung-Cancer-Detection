@@ -30,8 +30,6 @@ if os.path.exists(data_dir):
 else:
     print("The data directory does not exist or is not accessible.")
 
-# In[6]:
-
 
 
 # In[7]:
