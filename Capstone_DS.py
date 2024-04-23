@@ -24,7 +24,7 @@ data_dir = './cancer-patients-and-air-pollution-a-new-link'
 if os.path.exists(data_dir):
     # List files in the data directory
     files = os.listdir(data_dir)
-    print("Contents of data directory:", files)
+    print("Contents of data directory:", files)  # Debug statement
     
     # Read the CSV file
     data_file_path = os.path.join(data_dir, 'cancer patient data sets.csv')
@@ -32,7 +32,6 @@ if os.path.exists(data_dir):
     print("Loaded dataset successfully!")
 else:
     print("The data directory does not exist or is not accessible.")
-
 
 # In[6]:
 
