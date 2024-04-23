@@ -7,4 +7,5 @@ psutil
 pydotplus
 xgboost
 seaborn==0.11.2
+pandas==1.4.0
 
