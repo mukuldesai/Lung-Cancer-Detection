@@ -1,9 +1,10 @@
 import subprocess
 import os
 import pandas as pd
+
 import urllib
 
-# Set the raw GitHub file URL
+# Construct the raw GitHub file URL
 raw_file_url = 'https://raw.githubusercontent.com/mukuldesai/demoDS/main/cancer%20patient%20data%20sets.csv'
 
 # Read the CSV file from the raw GitHub file URL
@@ -12,24 +13,6 @@ data = pd.read_csv(urllib.request.urlopen(raw_file_url))
 # Display the data
 print(data.head())
 
-
-csv_file_path = os.path.join(repo_path, 'cancer patient data sets.csv')
-
-# Read the CSV file
-data = pd.read_csv(csv_file_path)
-
-# Display the data
-print(data.head())
-
-
-# Define the path to the CSV file in your GitHub repository
-csv_file_path = os.path.join(repo_path, 'cancer patient data sets.csv')
-
-# Read the CSV file
-data = pd.read_csv(csv_file_path)
-
-# Display the data
-print(data.head())
 
 # Define the directory containing the downloaded dataset
 data_dir = './cancer-patients-and-air-pollution-a-new-link'
