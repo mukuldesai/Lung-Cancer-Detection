@@ -1,7 +1,7 @@
 import subprocess
 import os
 import pandas as pd
-
+import seaborn as sns
 import urllib
 
 # Construct the raw GitHub file URL
@@ -110,6 +110,9 @@ print(data.dtypes)
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+
+data = data.replace([float('inf'), float('-inf')], pd.NA).dropna(subset=['Age'])
+
 # Example: Histogram of Age
 plt.figure(figsize=(10, 6))
 sns.histplot(data['Age'], bins=20, kde=True)
@@ -117,7 +120,6 @@ plt.title('Distribution of Age')
 plt.xlabel('Age')
 plt.ylabel('Frequency')
 plt.show()
-
 
 # Import the necessary libraries for data visualization: seaborn (as sns) and matplotlib.pyplot (as plt).
 # Create a histogram of the 'Age' column in the data DataFrame, specifying 20 bins and enabling kernel density estimation (kde).
