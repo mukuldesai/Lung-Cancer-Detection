@@ -1,21 +1,18 @@
 import subprocess
 import os
-import opendatasets as od
 import pandas as pd
 
-# Execute pip install command using subprocess
-subprocess.run(['pip', 'install', 'opendatasets'])
+# Set the GitHub repository URL
+repo_path = 'https://github.com/mukuldesai/demoDS/'
 
-# Set the directory containing kaggle.json
-repo_path = repo_path = 'https://github.com/mukuldesai/demoDS/'
-  # Update this with your actual path
-kaggle_credentials_dir = os.path.join(repo_path, 'kaggle.json')
+# Define the path to the CSV file in your GitHub repository
+csv_file_path = os.path.join(repo_path, 'cancer patient data sets.csv')
 
-# Dataset URL
-data = "https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link"
+# Read the CSV file
+data = pd.read_csv(csv_file_path)
 
-# Download dataset using opendatasets
-od.download(data)
+# Display the data
+print(data.head())
 
 # Define the directory containing the downloaded dataset
 data_dir = './cancer-patients-and-air-pollution-a-new-link'
