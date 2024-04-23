@@ -45,10 +45,6 @@ from sklearn.ensemble import RandomForestClassifier
 
 
 
-# In[11]:
-
-
-data = pd.read_csv('.\cancer-patients-and-air-pollution-a-new-link\cancer patient data sets.csv')
 
 
 # In[12]:
@@ -64,16 +60,9 @@ data.head()
 data.isnull().sum()
 
 
-# In[14]:
 
 
-# Displaying count of null values
-data.isnull().sum()
 
-
-# Since no row data contains the null values so none of the rows have been deleted from dataset
-
-# In[15]:
 
 
 #Checking the data types of the columns in the dataset
