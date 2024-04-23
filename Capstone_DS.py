@@ -101,8 +101,7 @@ print(data.dtypes)
 # In[19]:
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
-get_ipython().run_line_magic('matplotlib', 'notebook')
+
 
 
 # In[20]:
