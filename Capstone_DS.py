@@ -3,7 +3,7 @@
 
 import subprocess
 import os
-import shutil
+
 import opendatasets as od
 import pandas as pd
 
