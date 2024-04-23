@@ -14,7 +14,6 @@ subprocess.run(['pip', 'install', 'opendatasets'])
 repo_path = '/mount/src/mukuldesai/demoDS/'  # Update this with your actual path
 kaggle_credentials_dir = os.path.join(repo_path, 'kaggle.json')
 
-
 # Move kaggle.json to the appropriate directory
 shutil.move(kaggle_credentials_dir, os.path.expanduser('~/.kaggle/kaggle.json'))
 
