@@ -52,18 +52,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
 
-# In[8]:
-
-
-
-
-
-data_dir = '.\cancer-patients-and-air-pollution-a-new-link'
-
-
-# In[10]:
-
-
 
 
 # In[11]:
