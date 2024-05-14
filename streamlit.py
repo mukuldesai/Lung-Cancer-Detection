@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
-import statsmodels.api as sm
 
 def load_data():
     # Use the correct file path and name
