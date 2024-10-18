@@ -43,7 +43,8 @@ ax[0, 1].set_title('Alcohol use')
 ax[1, 0].hist(filtered_data['Smoking'], bins=10, color='salmon')
 ax[1, 0].set_title('Smoking')
 
-ax[1, 1].hist(filtered_data['OccuPational Hazards'], bins=10, color='orange')
+# Correct the column name for "Occupational Hazards"
+ax[1, 1].hist(filtered_data['Occupational Hazards'], bins=10, color='orange')
 ax[1, 1].set_title('Occupational Hazards')
 
 # Adjust layout
