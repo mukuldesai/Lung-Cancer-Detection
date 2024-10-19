@@ -6,8 +6,10 @@ psutil
 xgboost
 seaborn==0.11.2
 matplotlib==3.5.0
-pandas==1.5.3
 streamlit==1.20.0  # Specify the Streamlit version you want
 pillow==9.0.1
 pydotplus==2.0.2
 kaggle==1.6.17
+numpy==1.24.0  # Change to a specific compatible version
+pandas==1.5.3
+
