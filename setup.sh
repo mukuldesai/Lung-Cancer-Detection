@@ -1,9 +1,10 @@
-mkdir -p ~/.streamlit/
+#!/bin/bash
+# Install system dependencies
+apt-get update && apt-get install -y \
+    build-essential \
+    python3-dev \
+    libjpeg-dev \
+    zlib1g-dev
 
-echo "\
-[server]\n\
-headless = true\n\
-port = $PORT\n\
-enableCORS = false\n\
-\n\
-" > ~/.streamlit/config.toml
+# Install Python dependencies
+pip install -r requirements.txt
