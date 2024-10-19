@@ -16,7 +16,7 @@
       ]
     }
   },
-  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y <packages.txt; sudo apt install -y libjpeg-dev zlib1g-dev build-essential python3-dev; [ -f requirements.txt ] && pip3 install --user -r requirements.txt --user; pip3 install --user streamlit; echo '✅ Packages installed and Requirements met'",
+  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y <packages.txt; sudo apt install -y libjpeg-dev zlib1g-dev build-essential python3-dev; [ -f requirements.txt ] && pip3 install --upgrade pip --user -r requirements.txt --user; pip3 install --user streamlit; echo '✅ Packages installed and Requirements met'",
   "postAttachCommand": {
     "server": "streamlit run streamlit.py --server.enableCORS false --server.enableXsrfProtection false"
   },
