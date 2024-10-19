@@ -1,12 +1,15 @@
-streamlit==1.6.0
 opendatasets
 mlxtend
 h2o
 graphviz
 psutil
-pydotplus
 xgboost
 seaborn==0.11.2
-pandas==1.5.3  # Keep the latest version
-pillow==8.3.2
 matplotlib==3.5.0
+pandas==1.5.3
+matplotlib==3.5.0
+pillow==9.0.1  # Add a compatible version for pillow
+streamlit==1.20.0  # Specify the Streamlit version you want
+h2o==3.46.0.5
+pydotplus==2.0.2
+kaggle==1.6.17
