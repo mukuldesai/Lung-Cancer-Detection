@@ -12,6 +12,12 @@ def load_data():
     except FileNotFoundError:
         st.error("The file was not found. Please check the file path and try again.")
         return None
+    except pd.errors.EmptyDataError:
+        st.error("The file is empty. Please provide a valid CSV file.")
+        return None
+    except pd.errors.ParserError:
+        st.error("Error parsing the file. Please ensure it is in the correct format.")
+        return None
 
 # Load the data
 data = load_data()
@@ -37,29 +43,32 @@ if data is not None:
     # Filter the data based on the selected level
     filtered_data = data[data['Level'] == selected_level]
 
+    # User input for number of bins
+    num_bins = st.slider("Select Number of Bins", min_value=5, max_value=50, value=10)
+
     # Create histograms for key factors
     fig, ax = plt.subplots(2, 2, figsize=(10, 10))
 
     # Air Pollution
-    ax[0, 0].hist(filtered_data['Air Pollution'], bins=10, color='skyblue', edgecolor='black')
+    ax[0, 0].hist(filtered_data['Air Pollution'], bins=num_bins, color='skyblue', edgecolor='black')
     ax[0, 0].set_title('Air Pollution')
     ax[0, 0].set_xlabel('Air Pollution Level')
     ax[0, 0].set_ylabel('Frequency')
 
     # Alcohol use
-    ax[0, 1].hist(filtered_data['Alcohol use'], bins=10, color='lightgreen', edgecolor='black')
+    ax[0, 1].hist(filtered_data['Alcohol use'], bins=num_bins, color='lightgreen', edgecolor='black')
     ax[0, 1].set_title('Alcohol use')
     ax[0, 1].set_xlabel('Alcohol Use Level')
     ax[0, 1].set_ylabel('Frequency')
 
     # Smoking
-    ax[1, 0].hist(filtered_data['Smoking'], bins=10, color='salmon', edgecolor='black')
+    ax[1, 0].hist(filtered_data['Smoking'], bins=num_bins, color='salmon', edgecolor='black')
     ax[1, 0].set_title('Smoking')
     ax[1, 0].set_xlabel('Smoking Level')
     ax[1, 0].set_ylabel('Frequency')
 
     # Occupational Hazards
-    ax[1, 1].hist(filtered_data['Occupational Hazards'], bins=10, color='orange', edgecolor='black')
+    ax[1, 1].hist(filtered_data['Occupational Hazards'], bins=num_bins, color='orange', edgecolor='black')
     ax[1, 1].set_title('Occupational Hazards')
     ax[1, 1].set_xlabel('Occupational Hazards Level')
     ax[1, 1].set_ylabel('Frequency')
