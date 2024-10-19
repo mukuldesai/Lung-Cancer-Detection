@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run Capstone_DS.py
+web: streamlit run streamlit.py
