@@ -1,4 +1,3 @@
-# Example packages.txt
 python3-dev
 libjpeg-dev
 zlib1g-dev
