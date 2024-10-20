@@ -16,7 +16,7 @@
       ]
     }
   },
-  "updateContentCommand": "[ -f packages.txt ] && sudo apt-get update && sudo apt-get install -y $(cat packages.txt) python3-distutils; [ -f requirements.txt ] && pip3 install --upgrade pip setuptools; pip3 install -r requirements.txt; echo '✅ Packages installed and Requirements met';",
+  "updateContentCommand": "[ -f packages.txt ] && sudo apt-get update && sudo apt-get install -y $(cat packages.txt); [ -f requirements.txt ] && pip3 install --upgrade pip setuptools; pip3 install -r requirements.txt; echo '✅ Packages installed and Requirements met';",
   "postAttachCommand": {
     "server": "streamlit run streamlit.py --server.enableCORS false --server.enableXsrfProtection false"
   },
