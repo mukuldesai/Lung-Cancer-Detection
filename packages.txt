@@ -7,3 +7,4 @@ libtiff5-dev
 libwebp-dev
 libharfbuzz-dev
 libfribidi-dev
+python3-distutils
