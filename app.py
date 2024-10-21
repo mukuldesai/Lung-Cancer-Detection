@@ -3,7 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load data with error handling and caching
-@st.cache
+@st.cache_data
+def load_data():
+    path = "cancer_patient_data_sets.csv"
+    return pd.read_csv(path)
+
 def load_data():
     try:
         path = "cancer_patient_data_sets.csv"  # Ensure the correct path to the CSV file
