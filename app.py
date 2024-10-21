@@ -23,6 +23,7 @@ def load_data():
         st.error(f"An unexpected error occurred: {e}")
         return None
 
+
 # Load the data
 data = load_data()
 
