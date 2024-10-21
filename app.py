@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 # Load data with error handling and caching
 @st.cache_data
 def load_data():
-    # Raw GitHub URL for the CSV file
-    url = "https://raw.githubusercontent.com/mukuldesai/Lung-Cancer-Detection/main/cancer_patient_data_sets.csv"
+    # Corrected raw GitHub URL for the CSV file with %20 for spaces
+    url = "https://raw.githubusercontent.com/mukuldesai/Lung-Cancer-Detection/main/cancer%20patient%20data%20sets.csv"
     try:
         data = pd.read_csv(url)
         return data
@@ -23,7 +23,6 @@ def load_data():
         st.error(f"An unexpected error occurred: {e}")
         return None
 
-
 # Load the data
 data = load_data()
 
@@ -33,8 +32,7 @@ if data is not None:
     st.write("This app displays the histograms for Air Pollution, Alcohol use, Smoking, and Occupational Hazards based on the selected cancer risk level.")
 
     # Overview section
-    st.write("""
-    ## Overview of Cancer Risk Levels and Influencing Factors
+    st.write("""## Overview of Cancer Risk Levels and Influencing Factors
     Explore the impact of lifestyle and environmental factors on cancer risk levels categorized as Low, Medium, or High:
     - **Alcohol Use**: Examines the correlation between alcohol consumption and cancer risk.
     - **Smoking**: Analyzes the well-documented relationship between smoking and cancer.
