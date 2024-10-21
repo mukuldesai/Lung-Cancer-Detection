@@ -5,18 +5,11 @@ import matplotlib.pyplot as plt
 # Load data with error handling and caching
 @st.cache_data
 def load_data():
+    # Raw GitHub URL for the CSV file
+    url = "https://raw.githubusercontent.com/mukuldesai/Lung-Cancer-Detection/main/cancer_patient_data_sets.csv"
     try:
-        path = "cancer_patient_data_sets.csv"  # Ensure the correct path to the CSV file
-        data = pd.read_csv(path)
-
-        # Validate if expected columns exist in the dataset
-        expected_columns = ['Air Pollution', 'Alcohol use', 'Smoking', 'Occupational Hazards', 'Level']
-        if not all(col in data.columns for col in expected_columns):
-            st.error("One or more expected columns are missing from the dataset.")
-            return None
-
+        data = pd.read_csv(url)
         return data
-
     except FileNotFoundError:
         st.error("The file was not found. Please check the file path and try again.")
         return None
