@@ -5,10 +5,11 @@ import matplotlib.pyplot as plt
 # Load data with error handling and caching
 @st.cache_data
 def load_data():
-    # Corrected raw GitHub URL for the CSV file with %20 for spaces
     url = "https://raw.githubusercontent.com/mukuldesai/Lung-Cancer-Detection/main/cancer%20patient%20data%20sets.csv"
     try:
         data = pd.read_csv(url)
+        # Standardize column names by stripping spaces and converting to lowercase
+        data.columns = data.columns.str.strip()  # Remove any leading/trailing spaces
         return data
     except FileNotFoundError:
         st.error("The file was not found. Please check the file path and try again.")
@@ -27,6 +28,9 @@ def load_data():
 data = load_data()
 
 if data is not None:
+    # Print column names for debugging
+    st.write("Columns in the dataset:", data.columns.tolist())
+
     # Set up your Streamlit app
     st.title('Cancer Patient Data Analysis')
     st.write("This app displays the histograms for Air Pollution, Alcohol use, Smoking, and Occupational Hazards based on the selected cancer risk level.")
@@ -71,8 +75,8 @@ if data is not None:
         ax[1, 0].set_xlabel('Smoking Level')
         ax[1, 0].set_ylabel('Frequency')
 
-        # Occupational Hazards
-        ax[1, 1].hist(filtered_data['Occupational Hazards'], bins=num_bins, color='orange', edgecolor='black')
+        # Occupational Hazards (updated to match the column name)
+        ax[1, 1].hist(filtered_data['OccuPational Hazards'], bins=num_bins, color='orange', edgecolor='black')
         ax[1, 1].set_title('Occupational Hazards')
         ax[1, 1].set_xlabel('Occupational Hazards Level')
         ax[1, 1].set_ylabel('Frequency')
