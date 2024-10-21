@@ -28,9 +28,6 @@ def load_data():
 data = load_data()
 
 if data is not None:
-    # Print column names for debugging
-    st.write("Columns in the dataset:", data.columns.tolist())
-
     # Set up your Streamlit app
     st.title('Cancer Patient Data Analysis')
     st.write("This app displays the histograms for Air Pollution, Alcohol use, Smoking, and Occupational Hazards based on the selected cancer risk level.")
@@ -65,7 +62,7 @@ if data is not None:
 
         # Alcohol use
         ax[0, 1].hist(filtered_data['Alcohol use'], bins=num_bins, color='lightgreen', edgecolor='black')
-        ax[0, 1].set_title('Alcohol use')
+        ax[0, 1].set_title('Alcohol Use')
         ax[0, 1].set_xlabel('Alcohol Use Level')
         ax[0, 1].set_ylabel('Frequency')
 
@@ -75,7 +72,7 @@ if data is not None:
         ax[1, 0].set_xlabel('Smoking Level')
         ax[1, 0].set_ylabel('Frequency')
 
-        # Occupational Hazards (updated to match the column name)
+        # Occupational Hazards
         ax[1, 1].hist(filtered_data['OccuPational Hazards'], bins=num_bins, color='orange', edgecolor='black')
         ax[1, 1].set_title('Occupational Hazards')
         ax[1, 1].set_xlabel('Occupational Hazards Level')
